@@ -18,12 +18,14 @@ body{
     padding-bottom: 50px;
 }
 .swiper-slide{
-    width: 300px;
+    width: 200px;
     height: 300px;
     object-fit: cover;
     overflow: hidden;
     border: 15px solid #333333;
     /* padding: .2rem; */
+    filter: grayscale(0%);
+    transition: all 0.5s ease-in-out;
 }
 .swiper-slide:not(.swiper-slide-active){
     filter: grayscale(100%);
