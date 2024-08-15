@@ -25,8 +25,5 @@ var swiper = new Swiper(".swiper", {
     delay:1000,
     disableOnInteraction:false,
     pauseOnMouseEnter: true,
-    // autoplayPause(swiper){
-
-    // }
   },
 });
