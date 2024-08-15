@@ -25,10 +25,10 @@ body{
     border: 15px solid #333333;
     /* padding: .2rem; */
 }
-/* .swiper-slide:not(.swiper-slide-active){
+.swiper-slide:not(.swiper-slide-active){
     filter: grayscale(100%);
 
-} */
+}
 
 
 /* .swiper-pagination{

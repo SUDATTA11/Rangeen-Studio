@@ -15,23 +15,60 @@
   <body>
     <div class="swiper">
       <div class="swiper-wrapper">
-          <img class="content swiper-slide" src="Image1.jpg" alt="" />
-          <img class="content swiper-slide" src="Image2.jpg" alt="" />
-          <img class="content swiper-slide" src="Image3.jpg" alt="" />
-          <img class="content swiper-slide" src="Image2.jpg" alt="" />
-          <img class="content swiper-slide" src="Image4.jpg" alt="" />
-          <img class="content swiper-slide" src="Image5.jpg" alt="" />
-          <img class="content swiper-slide" src="Image1.jpg" alt="" />
-          <img class="content swiper-slide" src="Image3.jpg" alt="" />
-          <img class="content swiper-slide" class="content swiper-slide" src="Image6.jpg" alt="" />
-          <img class="content swiper-slide" src="Image2.jpg" alt="" />
+        <img class="content swiper-slide" src="Image1.jpg" alt="" />
+        <img class="content swiper-slide" src="Image2.jpg" alt="" />
+        <img class="content swiper-slide" src="Image3.jpg" alt="" />
+        <img class="content swiper-slide" src="Image2.jpg" alt="" />
+        <img class="content swiper-slide" src="Image4.jpg" alt="" />
+        <img class="content swiper-slide" src="Image5.jpg" alt="" />
+        <img class="content swiper-slide" src="Image1.jpg" alt="" />
+        <img class="content swiper-slide" src="Image3.jpg" alt="" />
+        <img
+          class="content swiper-slide"
+          class="content swiper-slide"
+          src="Image6.jpg"
+          alt=""
+        />
+        <img class="content swiper-slide" src="Image2.jpg" alt="" />
       </div>
       <div class="swiper-pagination"></div>
     </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 2,
+        speed: 600,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: -20,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        on: {
+          click(event) {
+            swiper.slideTo(this.clickedIndex);
+          },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          // autoplayPause(swiper){
 
-    <script src="script.js"></script>
+          // }
+        },
+      });
+    </script>
   </body>
 </html>
