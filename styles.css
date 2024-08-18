@@ -1,6 +1,31 @@
+:root{
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  padding: 20px;
+}
+.gallery {
+  width: 100%;
+  columns: 3;
+  column-gap: 15px;
+  break-inside: avoid;
+}
+.gallery img {
+  /* width: 300px; */
+  max-width: 100%;
+  margin-bottom: 10px;
+  border: 15px solid #333333;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 600px) {
+  .gallery {
+    columns: 2;
+  }
 }
