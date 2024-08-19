@@ -7,6 +7,7 @@
   --light-s-bg: #eeeeee;
   --dark-p-bg: #333333;
   --dark-s-bg: #828282;
+  --frame-linear: linear-gradient( #eeeeee, #ffffff);
 
   --light-p-text: #333333;
   --light-s-text: #828282;
@@ -113,14 +114,16 @@ p{
   text-wrap: balance;
 }
 .gallery{
-  columns: 4;
-  column-gap: 10px;
+  max-width: var(--max-width);
+  columns: 3;
+  column-gap: 15px;
 }
 .gallery img{
+  /* background: var(--frame-linear); */
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* -----FOOTER------ */
@@ -144,7 +147,7 @@ p{
   }
   .gallery{
     columns: 2;
-    column-gap: 5px;
+    column-gap: 10px;
   }
   .gallery img{
     padding: 5px;
