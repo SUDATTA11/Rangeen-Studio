@@ -1,31 +1,153 @@
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+  --light-p-bg: #ffffff;
+  --light-s-bg: #eeeeee;
+  --dark-p-bg: #333333;
+  --dark-s-bg: #828282;
+
+  --light-p-text: #333333;
+  --light-s-text: #828282;
+  --dark-p-text: #ffffff;
+  --dark-s-text: #e1e1e1;
+
+  --main-size: clamp(2.488rem, 0.4527rem + 3.3778vw, 2.986rem);
+  --sub-size: clamp(1.728rem, -0.3538rem + 3.237vw, 2.074rem);
+  --body-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+
+  --section-d-pad: 60px 100px;
+  --individual-d-h-pad: 0 100px;
+  --individual-d-v-pad: 60px 0;
+
+  --section-m-pad: 40px 25px;
+  --individual-m-h-pad: 0 25px;
+  --individual-m-v-pad: 40px 0;
+
+  --max-width: 900px;
+
+  --basic-gap: 10px;
+  --section-gap: 40px;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
 }
-main {
-  padding: 20px;
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-.gallery {
+body {
   width: 100%;
-  columns: 3;
-  column-gap: 15px;
-  break-inside: avoid;
+  /* overflow: hidden; */
 }
-.gallery img {
-  /* width: 300px; */
-  max-width: 100%;
+
+
+/* -----NATIVES------ */
+h1 {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-size);
+  line-height: 1;
+  color: var(--light-p-text);
+  text-wrap: nowrap;
+}
+h2 {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--sub-size);
+  line-height: 1;
+  color: var(--light-p-text);
+  text-wrap: nowrap;
+}
+p{
+  font-family: "Satoshi", "Roboto";
+  font-size: var(--body-size);
+  color: var(--light-s-text);
+}
+/* -----NATIVES-END------ */
+
+
+
+
+/* -----HERO------ */
+.hero-section {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-d-pad);
+}
+.hero-content {
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--section-gap);
+}
+
+
+/* -----GALLERY------ */
+.gallery-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-d-pad);
+  gap: var(--section-gap);
+}
+.gallery-content{
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--basic-gap);
+  text-align: center;
+  text-wrap: balance;
+}
+.gallery{
+  columns: 4;
+  column-gap: 10px;
+}
+.gallery img{
+  width: 100%;
   margin-bottom: 10px;
-  border: 15px solid #333333;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
 }
 
+/* -----FOOTER------ */
 
-@media (max-width: 600px) {
-  .gallery {
+
+
+
+@media (max-width: 768px) {
+  .hero-section, .gallery-section {
+    padding: var(--section-m-pad);
+  }
+  h1{
+    text-wrap: wrap;
+  }
+  .hero-content, .gallery-content {
+    flex-direction: column;
+    gap: var(--basic-gap);
+    align-items: center;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .gallery{
     columns: 2;
+    column-gap: 5px;
+  }
+  .gallery img{
+    padding: 5px;
+    margin-bottom: 5px;
   }
 }
