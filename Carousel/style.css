@@ -56,7 +56,7 @@ a, a:link, a:visited {
     position: relative;
     transform-style: preserve-3d;
     transform-origin: 0 50%;
-	perspective: 10000px  !important;
+	perspective: 1500px  !important;
 }
 
 .slider-item {
@@ -103,10 +103,24 @@ a, a:link, a:visited {
 	background: #e4e5e6;
 
 }
-.superHero1 {background: url(img/superhero1.jpg) !important;}
-.superHero2 {background: url(img/superhero2.jpg) !important;}
-.superHero3 {background: url(img/superhero3.jpg) !important;}
-.superHero4 {background: url(img/superhero4.jpg) !important;}
-.superHero5 {background: url(img/superhero5.jpg) !important;}
-.superHero6 {background: url(img/superhero6.jpg) !important;}
-.superHero7 {background: url(img/superhero7.jpg) !important;}
+.slider-item:nth-child(1){
+    background: url(./img/superhero1.jpg);
+}
+.slider-item:nth-child(2){
+    background: url(./img/superhero2.jpg);
+}
+.slider-item:nth-child(3){
+    background: url(./img/superhero3.jpg);
+}
+.slider-item:nth-child(4){
+    background: url(./img/superhero4.jpg);
+}
+.slider-item:nth-child(5){
+    background: url(./img/superhero5.jpg);
+}
+.slider-item:nth-child(6){
+    background: url(./img/superhero6.jpg);
+}
+.slider-item:nth-child(7){
+    background: url(./img/superhero7.jpg);
+}
