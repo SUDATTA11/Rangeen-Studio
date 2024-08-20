@@ -138,10 +138,6 @@ span {
 }
 
 .gallery-filters {
-  /* background: var(--light-s-bg); */
-  width: fit-content;
-  padding: 10px 10px;
-  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +147,7 @@ span {
   background: none;
   background: var(--light-s-bg);
   color: var(--light-s-text);
-  padding: 5px 10px;
+  padding: 7px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -160,7 +156,7 @@ span {
 
 .gallery-filters button:hover {
   background: var(--light-p-bg);
-  border: 1px solid var(--light-p-text);
+  outline: 1px solid var(--light-p-text);
   color: var(--light-p-text);
 }
 .gallery-filters button.active {
