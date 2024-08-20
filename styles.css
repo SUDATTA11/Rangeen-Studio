@@ -154,12 +154,14 @@ span {
   transition: all 0.3s ease-in-out;
 }
 
+.gallery-filters button:focus,
 .gallery-filters button:hover {
-  background: var(--light-p-bg);
-  outline: 1px solid var(--light-p-text);
   color: var(--light-p-text);
 }
 .gallery-filters button.active {
+  background: var(--light-p-text);
+  color: var(--light-p-bg);
+  outline: 1px solid var(--light-p-text);
   pointer-events: none;
 }
 
