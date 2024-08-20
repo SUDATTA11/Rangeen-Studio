@@ -136,6 +136,37 @@ span {
   text-align: center;
   text-wrap: balance;
 }
+
+.gallery-filters {
+  /* background: var(--light-s-bg); */
+  width: fit-content;
+  padding: 10px 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.gallery-filters button{
+  background: none;
+  background: var(--light-s-bg);
+  color: var(--light-s-text);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-filters button:hover {
+  background: var(--light-p-bg);
+  border: 1px solid var(--light-p-text);
+  color: var(--light-p-text);
+}
+.gallery-filters button.active {
+  pointer-events: none;
+}
+
 .gallery {
   max-width: var(--max-width);
   columns: 3;
@@ -158,32 +189,32 @@ span {
 
 /* .img-cont:hover {
   height: 400px;
-} */
-.img-cont:hover img {
-  transform: scale(0.9) rotate(-2deg);
-}
-
-.img-cont img {
-  width: 100%;
-  transition: all 0.5s ease-in-out;
-}
-
-.img-content {
-  display: flex;
-  display: none;
-  /* opacity: 0; */
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  z-index: 10;
-  transition: all 0.5s ease-in-out;
-  /* text-wrap: balance; */
-}
-span {
-  height: fit-content;
-  width: fit-content;
-  background: #f5f5f5;
-  padding: 5px 10px;
+  } */
+  .img-cont:hover img {
+    transform: scale(0.9) rotate(-2deg);
+  }
+  
+  .img-cont img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .img-content {
+    display: flex;
+    display: none;
+    /* opacity: 0; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    /* text-wrap: balance; */
+  }
+  span {
+    height: fit-content;
+    width: fit-content;
+    background: #f5f5f5;
+    padding: 5px 10px;
   border-radius: 50px;
   text-wrap: nowrap;
 }
@@ -203,27 +234,17 @@ span {
     gap: var(--basic-gap);
     align-items: center;
     text-align: center;
-    text-wrap: wrap;
+  }
+  .hero-des{
+    text-wrap: balance;
   }
   .gallery-content {
     flex-direction: column;
   }
-
   .gallery-filters {
-    background: var(--light-s-bg);
-    padding: 10px 20px;
-    border-radius: 50px;
+    flex-wrap: wrap;
   }
-  .gallery-filters button{
-    background: var(--light-p-bg);
-    color: var(--light-s-text);
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50px;
-    display: flex;
-    gap: 10px;
-  }
-
+  
   .gallery {
     columns: 2;
     column-gap: 10px;
