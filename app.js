@@ -35,31 +35,31 @@ function fitlerCategories(filterdata) {
 }
 
 //POP-UP CODE-----------------------
-const popupCont = document.querySelector(".gallery-popups");
-const popups = document.querySelectorAll(".popup");
-const popupContent = document.querySelector(".popup-content");
-const imgCont = document.querySelectorAll(".img-cont");
+// const popupCont = document.querySelector(".gallery-popups");
+// const popups = document.querySelectorAll(".popup");
+// const popupContent = document.querySelector(".popup-content");
+// const imgCont = document.querySelectorAll(".img-cont");
 
-// popupCont.addEventListener("click", () => {
+// // popupCont.addEventListener("click", () => {
+// // });
+
+// imgCont.forEach((imglol) => {
+//   imglol.addEventListener("click", () => {
+//     let imgName = imglol.getAttribute("data-name");
+
+//     popups.forEach((popup) => {
+
+//       popupCont.addEventListener("click", () => {
+//         popup.classList.remove("active");
+//         popupCont.style.display = "none";
+//       });
+
+
+//       let popupName = popup.getAttribute("data-popup");
+//       if (imgName == popupName) {
+//         popup.classList.add("active");
+//         popupCont.style.display = "flex";
+//       }
+//     });
+//   });
 // });
-
-imgCont.forEach((imglol) => {
-  imglol.addEventListener("click", () => {
-    let imgName = imglol.getAttribute("data-name");
-
-    popups.forEach((popup) => {
-
-      popupCont.addEventListener("click", () => {
-        popup.classList.remove("active");
-        popupCont.style.display = "none";
-      });
-
-
-      let popupName = popup.getAttribute("data-popup");
-      if (imgName == popupName) {
-        popup.classList.add("active");
-        popupCont.style.display = "flex";
-      }
-    });
-  });
-});
