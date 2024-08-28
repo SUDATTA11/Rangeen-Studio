@@ -492,7 +492,7 @@ nav {
 
 /* -----FOOTER------ */
 .footer-section {
-  background: url(./SR-bg-3.jpg);
+  /* background: url(./SR-bg-3.jpg); */
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -501,12 +501,12 @@ nav {
   padding: var(--section-d-pad);
   position: relative;
 }
-.footer-rangoli {
-  background: url(./top-raangoli.png);
+.footer-bg {
+  background: url(./footer-bg.png);
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: top center;
-  opacity: 0.15;
+  opacity: 0.5;
   z-index: 0;
   position: absolute;
   transform: scaleY(-1);

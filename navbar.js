@@ -1,4 +1,6 @@
 const activePage = window.location.pathname;
+console.log(activePage);
+
 const navlinks = document.querySelectorAll(".nav-links a:not(:last-child)")
 navlinks.forEach((link) =>{
     if (link.href.includes(`${activePage}`)) {
