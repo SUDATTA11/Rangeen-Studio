@@ -660,13 +660,13 @@
             <a href="">Facebook</a>
         </section>
       </article>
-      <section class="footer-msgbox">
+      <form class="footer-msgbox">
         <p class="msgbox-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dignissimos minus distinctio facere voluptas? Iure voluptas nam inventore qui! At!</p>
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email id">
-        <input type="" placeholder="Message">
-        <button class="msgbox-submit">Send Message</button>
-      </section>
+        <input id="form-name" type="text" placeholder="Full Name" required>
+        <input id="form-email" type="email" aria-errormessage="Fill correcctly" placeholder="Email id" required>
+        <textarea id="form-message" rows="5" placeholder="Enter yor message here..." required></textarea>
+        <button type="submit" class="msgbox-submit">Send Message</button>
+      </form>
     </footer>
 
     <script>
@@ -694,6 +694,7 @@
 
     <!------------ APP.JS -------------->
     <script src="./app.js"></script>
-    <script src="./navbar.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./common.js"></script>
   </body>
 </html>
