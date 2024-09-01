@@ -1,18 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-@import url("https://fonts.cdnfonts.com/css/satoshi");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 :root {
-  --light-p-bg: #ffffff;
-  --light-s-bg: #f5f5f5;
-  --frame-shadow: rgba(0, 0, 0, 0.2);
+  --light-p-bg: light-dark(#ffffff, #111111);
+  --light-s-bg: light-dark(#f5f5f5, #222222);
+  --frost-bg: light-dark(rgba(245, 245, 245, 0.5), rgba(34, 34, 34, 0.5));
+  --frame-shadow: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
 
-  --light-p-text: #333333;
-  --light-s-text: #888888;
+  --light-p-text: light-dark(#333333, #ffffff);
+  --light-s-text: light-dark(#888888, #888888);
 
   --main-size: clamp(2.488rem, 0.4527rem + 3.3778vw, 2.986rem);
   --sub-size: clamp(1.728rem, -0.3538rem + 3.237vw, 2.074rem);
-  --h3-title: clamp(1.44rem, -0.3538rem + 3.237vw, 1.728rem);
+  --h3-title: 1.44rem;
   --body-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   --small-size: clamp(0.694rem, 0.6444rem + 0.7407vw, 1rem);
 
@@ -29,14 +26,6 @@
   --basic-gap: 10px;
   --section-gap: 40px;
 }
-.dark-mode {
-  --light-p-bg: #111111;
-  --light-s-bg: #222222;
-  --frame-shadow: rgba(0, 0, 0, 0.5);
-
-  --light-p-text: #ffffff;
-  --light-s-text: #888888;
-}
 * {
     margin: 0;
     padding: 0;
@@ -44,10 +33,9 @@
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
 }
-.popup-content::-webkit-scrollbar,
-.popup-data::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
     background: var(--light-s-bg);
 }
 ::-webkit-scrollbar-thumb {
@@ -62,6 +50,7 @@ html {
 body {
   width: 100%;
   background: var(--light-s-bg);
+  color-scheme: light dark;
 }
 
 /* -----NATIVES------ */
@@ -84,7 +73,7 @@ h1 {
     line-height: 1;
   }
   p {
-    font-family: "Satoshi", "Roboto";
+    font-family: "Satoshi", sans-serif;
     font-size: var(--body-size);
     color: var(--light-s-text);
     font-weight: 400;
@@ -97,13 +86,13 @@ h1 {
     line-height: 1;
   }
   span {
-    font-family: "Satoshi", "Roboto";
+    font-family: "Satoshi", sans-serif;
     font-size: var(--small-size);
     color: var(--light-s-text);
     font-weight: 400;
   }
   a {
-    font-family: "Satoshi", "Roboto";
+    font-family: "Satoshi", sans-serif;
     font-size: var(--small-size);
     text-decoration: none;
   }
@@ -145,20 +134,24 @@ nav {
   object-fit: cover;
   transition: all 0.5s;
 }
+@media (prefers-color-scheme: dark) {
+  .nav-logo img {
+    filter: invert(1);
+  }
+}
 .nav-links,
 .nav-socials {
   padding: 10px;
   border: 1px solid var(--light-s-bg);
-  background: rgba(245, 245, 245, 0.5);
+  background: var(--frost-bg);
   backdrop-filter: blur(20px);
   border-radius: 50px;
   display: flex;
   gap: var(--basic-gap);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--frame-shadow);
 }
 .nav-links a {
   padding: 10px 20px;
-  /* background: var(--light-p-bg); */
   border-radius: 50px;
   color: var(--light-p-text);
   transition: all 0.5s;
@@ -222,7 +215,6 @@ header{
     opacity: 0.05;
     z-index: 0;
     position: absolute;
-    /* transform: scaleY(-1); */
     top: 0;
     left: 0;
     width: 100%;
@@ -237,10 +229,6 @@ header{
   gap: 40px;
   align-items: center;
   padding: var(--section-d-pad);
-  /* border-bottom-left-radius: 20vw; */
-  /* border-bottom-right-radius: 100px; */
-  /* box-shadow: -70vw 50px 50px whitesmoke,
-              70vw 50px 50px whitesmoke; */
 }
 .hero-content {
   max-width: var(--max-width);
@@ -251,7 +239,6 @@ header{
   margin-bottom: 200px;
 }
 .slider-cont {
-  /* background: lightcoral; */
   height: 400px;
   position: absolute;
   bottom: 20px;
@@ -264,7 +251,6 @@ header{
 .slide-track {
   display: flex;
   gap: 20px;
-  /* width: (auto *20); */
   animation: scroll 20s linear infinite;
 }
 .slide-track:hover {
@@ -272,12 +258,9 @@ header{
 }
 .slide-track .slide {
   background: var(--light-s-bg);
-  /* width: auto; */
   height: 300px;
   padding: 10px;
   box-shadow: 4px 4px 10px var(--frame-shadow);
-  /* perspective: 100px; */
-  /* z-index: 100; */
   transition: all 0.5s;
 }
 .slide img {
@@ -286,7 +269,6 @@ header{
 .slide:hover {
   z-index: 100;
   transform: scale(1.2);
-  /* transform: translateZ(20px); */
 }
 
 @keyframes scroll {
@@ -349,14 +331,14 @@ header{
   align-items: center;
   width: 50px;
   height: 50px;
-  background: white;
+  background: var(--light-p-bg);
+  color: var(--light-p-text);
   border-radius: 50%;
 }
 
 /* ------------TEAM-SECTION------------ */
 .team-section {
   padding: var(--section-d-pad);
-  /* background: var(--light-p-bg); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -438,7 +420,6 @@ header{
   border-radius: 50px;
 }
 .team .team-des {
-  /* background: var(--light-p-bg); */
   padding: 10px;
 }
 
@@ -446,7 +427,6 @@ header{
 .footer-section {
   background: var(--light-p-bg);
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: flex-start;
   gap: var(--section-gap);
@@ -487,9 +467,7 @@ header{
 }
 .footer-links a {
   padding: 10px 20px;
-  /* background: var(--light-p-bg); */
-  /* font-size: var(--small-size); */
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--frost-bg);
   backdrop-filter: blur(10px);
   border-radius: 50px;
   text-decoration: none;
@@ -498,9 +476,8 @@ header{
 .footer-msgbox {
   max-width: 500px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--frost-bg);
   backdrop-filter: blur(10px);
-  /* background: var(--light-p-bg); */
   display: flex;
   flex-direction: column;
   gap: var(--basic-gap);
@@ -508,11 +485,10 @@ header{
   border-radius: 10px;
 }
 .footer-msgbox input, .footer-msgbox textarea {
-  font-family: "Satoshi", "Roboto";
+  font-family: "Satoshi", sans-serif;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
-  /* border: 1px solid var(--light-s-text); */
   background: var(--light-s-bg);
   resize: none;
 }
@@ -555,9 +531,10 @@ header{
     justify-content: center;
     margin: 0 auto;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--frost-bg);
     backdrop-filter: blur(20px);
     border: 1px solid var(--light-p-bg);
+    box-shadow: 0 0 10px var(--frame-shadow);
     border-radius: 25px;
     transition: height 0.5s;
     overflow: hidden;
@@ -608,9 +585,6 @@ header{
     opacity: 1;
   }
 
-  /* .nav-links a.active {
-    background: var(--light-s-bg);
-  } */
   .nav-socials {
     flex-direction: row;
   }

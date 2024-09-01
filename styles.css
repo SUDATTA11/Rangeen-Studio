@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-@import url("https://fonts.cdnfonts.com/css/satoshi");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 :root {
-  --light-p-bg: #ffffff;
-  --light-s-bg: #f5f5f5;
-  --frame-shadow: rgba(0, 0, 0, 0.2);
+  --light-p-bg: light-dark(#ffffff, #111111);
+  --light-s-bg: light-dark(#f5f5f5, #222222);
+  --frost-bg: light-dark(rgba(245, 245, 245, 0.5), rgba(34, 34, 34, 0.5));
+  --frame-shadow: light-dark(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
 
-  --light-p-text: #333333;
-  --light-s-text: #888888;
+  --light-p-text: light-dark(#333333, #ffffff);
+  --light-s-text: light-dark(#888888, #888888);
 
   --main-size: clamp(2.488rem, 0.4527rem + 3.3778vw, 2.986rem);
   --sub-size: clamp(1.728rem, -0.3538rem + 3.237vw, 2.074rem);
@@ -29,14 +26,6 @@
   --basic-gap: 10px;
   --section-gap: 40px;
 }
-.dark-mode {
-  --light-p-bg: #111111;
-  --light-s-bg: #222222;
-  --frame-shadow: rgba(0, 0, 0, 0.5);
-
-  --light-p-text: #ffffff;
-  --light-s-text: #888888;
-}
 * {
   margin: 0;
   padding: 0;
@@ -44,8 +33,7 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
 }
-.popup-content::-webkit-scrollbar,
-.popup-data::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background: var(--light-s-bg);
@@ -62,6 +50,7 @@ html {
 body {
   width: 100%;
   background: var(--light-s-bg);
+  color-scheme: light dark;
   /* overflow: hidden; */
 }
 
@@ -85,7 +74,7 @@ h2 {
   line-height: 1;
 }
 p {
-  font-family: "Satoshi", "Roboto";
+  font-family: "Satoshi", sans-serif;
   font-size: var(--body-size);
   color: var(--light-s-text);
   font-weight: 400;
@@ -98,13 +87,13 @@ h3 {
   line-height: 1;
 }
 span {
-  font-family: "Satoshi", "Roboto";
+  font-family: "Satoshi", sans-serif;
   font-size: var(--small-size);
   color: var(--light-s-text);
   font-weight: 400;
 }
 a {
-  font-family: "Satoshi", "Roboto";
+  font-family: "Satoshi", sans-serif;
   font-size: var(--small-size);
   text-decoration: none;
 }
@@ -122,21 +111,17 @@ header {
   opacity: 0.05;
   z-index: 0;
   position: absolute;
-  /* transform: scaleY(-1); */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 nav {
-  /* background: lightblue; */
   width: 100%;
   position: fixed;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   z-index: 9999;
   padding: 20px 100px;
+  transition: all 0.5s;
 }
 .ham-cont {
   width: 100%;
@@ -156,24 +141,27 @@ nav {
 .nav-logo img {
   height: 50px;
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
   transition: all 0.5s;
+}
+@media (prefers-color-scheme: dark) {
+  .nav-logo img {
+    filter: invert(1);
+  }
 }
 .nav-links,
 .nav-socials {
   padding: 10px;
   border: 1px solid var(--light-s-bg);
-  background: rgba(245, 245, 245, 0.5);
+  background: var(--frost-shadow);
   backdrop-filter: blur(20px);
   border-radius: 50px;
   display: flex;
   gap: var(--basic-gap);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--frame-shadow);
 }
 .nav-links a {
   padding: 10px 20px;
-  /* background: var(--light-p-bg); */
   border-radius: 50px;
   color: var(--light-p-text);
   transition: all 0.5s;
@@ -233,10 +221,6 @@ nav {
   justify-content: center;
   align-items: center;
   padding: var(--section-d-pad);
-  /* border-bottom-left-radius: 20vw; */
-  /* border-bottom-right-radius: 100px; */
-  /* box-shadow: -70vw 50px 50px whitesmoke,
-              70vw 50px 50px whitesmoke; */
 }
 .hero-content {
   max-width: var(--max-width);
@@ -249,7 +233,6 @@ nav {
 /* -----GALLERY------ */
 .gallery-section {
   background: var(--light-p-bg);
-  /* border-radius: 30vw 30vw 0 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -454,7 +437,7 @@ nav {
 }
 .artist-head a:hover {
   background: var(--light-p-bg);
-  border: 1px solid var(--light-p-text);
+  outline: 1px solid var(--light-p-text);
   color: var(--light-p-text);
 }
 
@@ -470,12 +453,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: var(--basic-gap); */
 }
 .artist-content-title {
   max-width: 150px;
-  /* font-weight: 700; */
-  /* font-size: var(--body-size); */
 }
 .artist-content-des {
   font-size: var(--small-size);
@@ -494,7 +474,6 @@ nav {
 .footer-section {
   background: var(--light-p-bg);
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: flex-start;
   gap: var(--section-gap);
@@ -535,9 +514,7 @@ nav {
 }
 .footer-links a {
   padding: 10px 20px;
-  /* background: var(--light-p-bg); */
-  /* font-size: var(--small-size); */
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--frost-bg);
   backdrop-filter: blur(10px);
   border-radius: 50px;
   text-decoration: none;
@@ -546,9 +523,8 @@ nav {
 .footer-msgbox {
   max-width: 500px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--frost-bg);
   backdrop-filter: blur(10px);
-  /* background: var(--light-p-bg); */
   display: flex;
   flex-direction: column;
   gap: var(--basic-gap);
@@ -556,11 +532,10 @@ nav {
   border-radius: 10px;
 }
 .footer-msgbox input, .footer-msgbox textarea {
-  font-family: "Satoshi", "Roboto";
+  font-family: "Satoshi", sans-serif;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
-  /* border: 1px solid var(--light-s-text); */
   background: var(--light-s-bg);
   resize: none;
 }
@@ -600,9 +575,10 @@ nav {
     justify-content: center;
     margin: 0 auto;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--frost-bg);
     backdrop-filter: blur(20px);
     border: 1px solid var(--light-p-bg);
+    box-shadow: 0 0 10px var(--frame-shadow);
     border-radius: 25px;
     transition: height 0.5s;
     overflow: hidden;
