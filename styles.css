@@ -104,7 +104,7 @@ header {
   position: relative;
 }
 .header-rangoli {
-  background: url(./top-raangoli.png);
+  background: url(./imgs/top-raangoli.webp);
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -143,11 +143,6 @@ nav {
   width: 100%;
   object-fit: cover;
   transition: all 0.5s;
-}
-@media (prefers-color-scheme: dark) {
-  .nav-logo img {
-    filter: invert(1);
-  }
 }
 .nav-links,
 .nav-socials {
@@ -481,7 +476,7 @@ nav {
   position: relative;
 }
 .footer-bg {
-  background: url(./footer-bg.png);
+  background: url(./imgs/footer-bg.webp);
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -558,6 +553,17 @@ nav {
   outline: 1px solid var(--light-s-text);
 }
 
+
+
+
+@media (prefers-color-scheme: dark) {
+  .nav-logo img {
+    filter: invert(1);
+  }
+  .footer-bg{
+    opacity: 0.1;
+  }
+}
 @media (max-width: 950px) {
   nav {
     padding: 20px 25px;

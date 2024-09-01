@@ -103,12 +103,8 @@ h1 {
 
 /* -------------NAVBAR-------------- */
 nav {
-  /* background: lightblue; */
   width: 100%;
   position: fixed;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   z-index: 9999;
   padding: 20px 100px;
 }
@@ -133,11 +129,6 @@ nav {
   /* height: 100%; */
   object-fit: cover;
   transition: all 0.5s;
-}
-@media (prefers-color-scheme: dark) {
-  .nav-logo img {
-    filter: invert(1);
-  }
 }
 .nav-links,
 .nav-socials {
@@ -208,7 +199,7 @@ header{
     position: relative;
 }
 .header-rangoli {
-    background: url(./top-raangoli.png);
+    background: url(./imgs/top-raangoli.webp);
     background-size: 800px;
     background-repeat: no-repeat;
     background-position: top center;
@@ -434,7 +425,7 @@ header{
   position: relative;
 }
 .footer-bg {
-  background: url(./footer-bg.png);
+  background: url(./imgs/footer-bg.webp);
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -513,6 +504,15 @@ header{
 
 
 
+
+@media (prefers-color-scheme: dark) {
+  .nav-logo img {
+    filter: invert(1);
+  }
+  .footer-bg{
+    opacity: 0.1;
+  }
+}
 @media (max-width: 950px) {
   nav {
     padding: 20px 25px;
