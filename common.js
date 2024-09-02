@@ -1,13 +1,13 @@
 // --------------NAVBAR-ACTIVE-PILL-----------------
-const activePage = window.location.pathname;
-console.log(activePage);
+// const activePage = window.location.pathname;
+// console.log(activePage);
 
-const navlinks = document.querySelectorAll(".nav-links a:not(:last-child)");
-navlinks.forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add("active");
-  }
-});
+// const navlinks = document.querySelectorAll(".nav-links a:not(:last-child)");
+// navlinks.forEach((link) => {
+//   if (link.href.includes(`${activePage}`)) {
+//     link.classList.add("active");
+//   }
+// });
 
 // --------------NAVBAR-HAMBURGER-----------------
 const hamCont = document.querySelector(".ham-cont");
@@ -78,3 +78,14 @@ form.addEventListener("submit", (e) => {
 //   }
 //   prevScrollpos = currentScrollPos;
 // }
+
+document.querySelectorAll(".nav-links a:not(:last-child)").forEach((link)=>{
+  console.log(link);
+  
+  console.log(link.href, window.location.href);
+  
+if (link.href === window.location.href) {
+  link.classList.add("active")
+}
+
+})
