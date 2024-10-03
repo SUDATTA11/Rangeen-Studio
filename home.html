@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An art gallery website for Rangen Studio">
+    <title>Rangeen Studio</title>
+    <!------------ FAVICON-LINK ------------>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./RS-logo-favicon/favicon.ico"
+    />
+    <!------------- FONTS-LINK ------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+
+    <!------------- CSS-LINK ------------>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./imgs/interior/interior-1.jpg" />
+
+
+    <!-- ------SCROLLREVEAL-JS-PLUGINS------ -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-rangoli"></div>
+      <nav>
+        <div class="ham-cont">
+        <section class="nav-logo">
+          <a href="./home.html"><img src="./imgs/SR-logo-all.svg" alt="Studio rangeen logo for desktop"></a>
+          <a href="./home.html"><img src="./imgs/SR-logo.webp" alt="Studio rangeen logo for mobile"></a>
+        </section>
+        <section class="nav-links">
+          <a class="pages" href="./home.html">Gallery</a>
+          <a class="pages" href="./about.html">About</a>
+          <a href="#footer">Contact us</a>
+        </section>
+        <section class="nav-socials">
+          <a href="https://youtube.com/@shubhaankarkamble?si=z2D9ksH58fD8V811"  alt="youtube" target="_blank"><svg class="youtube" xmlns="http://www.w3.org/2000/svg" width="1.43em" height="1em" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
+          <a href="https://www.instagram.com/artist.shubhaankar?igsh=dTI0cHU1YzJ1enlw" alt="instagram" target="_blank"><svg class="instagram" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60"/><rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60"/><path fill="#fff" d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334"/><defs><radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1" gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse"><stop stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></radialGradient><radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1" gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)" gradientUnits="userSpaceOnUse"><stop stop-color="#3771c8"/><stop offset=".128" stop-color="#3771c8"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></radialGradient></defs></g></svg></a> 
+          <a href="https://www.facebook.com/share/bbhionpfLMBd3UiV/?mibextid=LQQJ4d" alt="facebook" target="_blank"><svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="#1877f2" d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/><path fill="#fff" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"/></svg></a>
+        </section>
+        <svg class="ham-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h8m-8-5h14m-8-5h8"/></svg>
+      </div>
+      </nav>
+      <!-- --------HERO-SECTION-------- -->
+      <section class="hero-section">
+        <article class="hero-content">
+          <h1 class="hero-title">Studio Rangeen</h1>
+          <p class="hero-des">
+            Discover a curated gallery of celebrity art, sculptures, spiritual works, and unique interior designs. Studio Rangeen offers a vibrant blend of creativity and inspiration for art lovers.
+          </p>
+        </article>
+        <article>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide--one"></div>
+              <div class="swiper-slide swiper-slide--two"></div>
+              <div class="swiper-slide swiper-slide--three"></div>
+              <div class="swiper-slide swiper-slide--four"></div>
+              <div class="swiper-slide swiper-slide--five"></div>
+              <div class="swiper-slide swiper-slide--six"></div>
+              <div class="swiper-slide swiper-slide--seven"></div>
+              <div class="swiper-slide swiper-slide--eight"></div>
+              <div class="swiper-slide swiper-slide--nine"></div>
+              <div class="swiper-slide swiper-slide--ten"></div>
+              <div class="swiper-slide swiper-slide--eleven"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          
+      </article>
+      </section>
+    </header>
+
+    <main>
+      <!-- --------GALLERY-SECTION-------- -->
+      <section class="gallery-section">
+        <div class="gallery-content">
+          <h2 class="gallery-title">Art Gallery</h2>
+          <p class="gallery-des">
+            Immerse yourself in a vibrant collection of celebrity creations, stunning sculptures, spiritual masterpieces, and captivating interior designs. Explore a world of color, expression, and inspiration.
+          </p>
+        </div>
+        <div class="gallery-filters">
+          <button data-filter="painting" class="filter-btn painting-btn">
+            Paintings
+          </button>
+          <button data-filter="sculpture" class="filter-btn sculpture-btn">
+            Sculptures
+          </button>
+          <button data-filter="celeb" class="filter-btn celebs-btn">
+            Celebrity Arts
+          </button>
+          <button data-filter="interior" class="filter-btn interior-btn">
+           Interior
+          </button>
+          <button data-filter="spiritual" class="filter-btn spiritual-btn">
+            Spiritual
+          </button>
+        </div>
+        <article class="gallery">
+          <!-- Paintings -->
+          <div class="img-cont" data-name="painting-1" data-category="painting">
+            <img src="./imgs/paintings/painting-1.jpg" alt="Painting 1" />
+          </div>
+          <div class="img-cont" data-name="painting-2" data-category="painting">
+            <img src="./imgs/paintings/painting-2.jpg" alt="Painting 2" />
+          </div>
+          <div class="img-cont" data-name="painting-3" data-category="painting">
+            <img src="./imgs/paintings/painting-3.jpg" alt="Painting 3" />
+          </div>
+          <div class="img-cont" data-name="painting-4" data-category="painting">
+            <img src="./imgs/paintings/painting-4.jpg" alt="Painting 4" />
+          </div>
+          <div class="img-cont" data-name="painting-5" data-category="painting">
+            <img src="./imgs/paintings/painting-5.jpg" alt="Painting 5" />
+          </div>
+          <div class="img-cont" data-name="painting-6" data-category="painting">
+            <img src="./imgs/paintings/painting-6.jpg" alt="Painting 6" />
+          </div>
+          <div class="img-cont" data-name="painting-7" data-category="painting">
+            <img src="./imgs/paintings/painting-7.jpg" alt="Painting 7" />
+          </div>
+          <div class="img-cont" data-name="painting-8" data-category="painting">
+            <img src="./imgs/paintings/painting-8.jpg" alt="Painting 8" />
+          </div>
+          <div class="img-cont" data-name="painting-9" data-category="painting">
+            <img src="./imgs/paintings/painting-9.jpg" alt="Painting 9" />
+          </div>
+          <div class="img-cont" data-name="painting-10" data-category="painting">
+            <img src="./imgs/paintings/painting-10.jpg" alt="Painting 10" />
+          </div>
+          <div class="img-cont" data-name="painting-11" data-category="painting">
+            <img src="./imgs/paintings/painting-11.jpg" alt="Painting 11" />
+          </div>
+          <div class="img-cont" data-name="painting-12" data-category="painting">
+            <img src="./imgs/paintings/painting-12.jpg" alt="Painting 12" />
+          </div>
+          <div class="img-cont" data-name="painting-13" data-category="painting">
+            <img src="./imgs/paintings/painting-13.jpg" alt="Painting 13" />
+          </div>
+          <div class="img-cont" data-name="painting-14" data-category="painting">
+            <img src="./imgs/paintings/painting-14.jpg" alt="Painting 14" />
+          </div>
+          <div class="img-cont" data-name="painting-15" data-category="painting">
+            <img src="./imgs/paintings/painting-15.jpg" alt="Painting 15" />
+          </div>
+          <div class="img-cont" data-name="painting-16" data-category="painting">
+            <img src="./imgs/paintings/painting-16.jpg" alt="Painting 16" />
+          </div>
+          <div class="img-cont" data-name="painting-17" data-category="painting">
+            <img src="./imgs/paintings/painting-17.jpg" alt="Painting 17" />
+          </div>
+          <div class="img-cont" data-name="painting-18" data-category="painting">
+            <img src="./imgs/paintings/painting-18.jpg" alt="Painting 18" />
+          </div>
+          <div class="img-cont" data-name="painting-19" data-category="painting">
+            <img src="./imgs/paintings/painting-19.jpg" alt="Painting 19" />
+          </div>
+          <div class="img-cont" data-name="painting-20" data-category="painting">
+            <img src="./imgs/paintings/painting-20.jpg" alt="Painting 20" />
+          </div>
+          <div class="img-cont" data-name="painting-21" data-category="painting">
+            <img src="./imgs/paintings/painting-21.jpg" alt="Painting 21" />
+          </div>
+          <div class="img-cont" data-name="painting-22" data-category="painting">
+            <img src="./imgs/paintings/painting-22.jpg" alt="Painting 22" />
+          </div>
+          <div class="img-cont" data-name="painting-23" data-category="painting">
+            <img src="./imgs/paintings/painting-23.jpg" alt="Painting 23" />
+          </div>
+          <div class="img-cont" data-name="painting-24" data-category="painting">
+            <img src="./imgs/paintings/painting-24.jpg" alt="Painting 24" />
+          </div>
+          <div class="img-cont" data-name="painting-25" data-category="painting">
+            <img src="./imgs/paintings/painting-25.jpg" alt="Painting 25" />
+          </div>
+          <div class="img-cont" data-name="painting-26" data-category="painting">
+            <img src="./imgs/paintings/painting-26.jpg" alt="Painting 26" />
+          </div>
+          <div class="img-cont" data-name="painting-27" data-category="painting">
+            <img src="./imgs/paintings/painting-27.jpg" alt="Painting 27" />
+          </div>
+          <div class="img-cont" data-name="painting-28" data-category="painting">
+            <img src="./imgs/paintings/painting-28.jpg" alt="Painting 28" />
+          </div>
+          <div class="img-cont" data-name="painting-29" data-category="painting">
+            <img src="./imgs/paintings/painting-29.jpg" alt="Painting 29" />
+          </div>
+          <div class="img-cont" data-name="painting-30" data-category="painting">
+            <img src="./imgs/paintings/painting-30.jpg" alt="Painting 30" />
+          </div>
+          <div class="img-cont" data-name="painting-31" data-category="painting">
+            <img src="./imgs/paintings/painting-31.jpg" alt="Painting 31" />
+          </div>          
+        
+          <!-- Celebs -->
+          <div class="img-cont" data-name="celeb-1" data-category="celeb">
+            <img src="./imgs/celebs/celebs-1.jpg" alt="Celeb 1" />
+          </div>
+          <div class="img-cont" data-name="celeb-2" data-category="celeb">
+            <img src="./imgs/celebs/celebs-2.jpg" alt="Celeb 2" />
+          </div>
+          <div class="img-cont" data-name="celeb-3" data-category="celeb">
+            <img src="./imgs/celebs/celebs-3.jpg" alt="Celeb 3" />
+          </div>
+          <div class="img-cont" data-name="celeb-4" data-category="celeb">
+            <img src="./imgs/celebs/celebs-4.jpg" alt="Celeb 4" />
+          </div>
+          <div class="img-cont" data-name="celeb-5" data-category="celeb">
+            <img src="./imgs/celebs/celebs-5.jpg" alt="Celeb 5" />
+          </div>
+          <div class="img-cont" data-name="celeb-6" data-category="celeb">
+            <img src="./imgs/celebs/celebs-6.jpg" alt="Celeb 6" />
+          </div>
+          <div class="img-cont" data-name="celeb-7" data-category="celeb">
+            <img src="./imgs/celebs/celebs-7.jpg" alt="Celeb 7" />
+          </div>
+          <div class="img-cont" data-name="celeb-8" data-category="celeb">
+            <img src="./imgs/celebs/celebs-8.jpg" alt="Celeb 8" />
+          </div>
+          <div class="img-cont" data-name="celeb-9" data-category="celeb">
+            <img src="./imgs/celebs/celebs-9.jpg" alt="Celeb 9" />
+          </div>
+          <div class="img-cont" data-name="celeb-10" data-category="celeb">
+            <img src="./imgs/celebs/celebs-10.jpg" alt="Celeb 10" />
+          </div>
+          <div class="img-cont" data-name="celeb-11" data-category="celeb">
+            <img src="./imgs/celebs/celebs-11.jpg" alt="Celeb 11" />
+          </div>
+          <div class="img-cont" data-name="celeb-12" data-category="celeb">
+            <img src="./imgs/celebs/celebs-12.jpg" alt="Celeb 12" />
+          </div>
+          <div class="img-cont" data-name="celeb-13" data-category="celeb">
+            <img src="./imgs/celebs/celebs-13.jpg" alt="Celeb 13" />
+          </div>
+          <div class="img-cont" data-name="celeb-14" data-category="celeb">
+            <img src="./imgs/celebs/celebs-14.jpg" alt="Celeb 14" />
+          </div>
+          <div class="img-cont" data-name="celeb-15" data-category="celeb">
+            <img src="./imgs/celebs/celebs-15.jpg" alt="Celeb 15" />
+          </div>
+          <div class="img-cont" data-name="celeb-16" data-category="celeb">
+            <img src="./imgs/celebs/celebs-16.jpg" alt="Celeb 16" />
+          </div>
+          <div class="img-cont" data-name="celeb-17" data-category="celeb">
+            <img src="./imgs/celebs/celebs-17.jpg" alt="Celeb 17" />
+          </div>
+          <div class="img-cont" data-name="celeb-18" data-category="celeb">
+            <img src="./imgs/celebs/celebs-18.jpg" alt="Celeb 18" />
+          </div>
+          <div class="img-cont" data-name="celeb-19" data-category="celeb">
+            <img src="./imgs/celebs/celebs-19.jpg" alt="Celeb 19" />
+          </div>
+          <div class="img-cont" data-name="celeb-20" data-category="celeb">
+            <img src="./imgs/celebs/celebs-20.jpg" alt="Celeb 20" />
+          </div>
+          <div class="img-cont" data-name="celeb-21" data-category="celeb">
+            <img src="./imgs/celebs/celeb-21.jpg" alt="Celeb 21" />
+          </div>
+          <div class="img-cont" data-name="celeb-22" data-category="celeb">
+            <img src="./imgs/celebs/celebs-22.jpg" alt="Celeb 22" />
+          </div>
+          <div class="img-cont" data-name="celeb-23" data-category="celeb">
+            <img src="./imgs/celebs/celebs-23.jpg" alt="Celeb 23" />
+          </div>
+          <div class="img-cont" data-name="celeb-24" data-category="celeb">
+            <img src="./imgs/celebs/celebs-24.jpg" alt="Celeb 24" />
+          </div>
+          <div class="img-cont" data-name="celeb-25" data-category="celeb">
+            <img src="./imgs/celebs/celebs-25.jpg" alt="Celeb 25" />
+          </div>
+          <div class="img-cont" data-name="celeb-26" data-category="celeb">
+            <img src="./imgs/celebs/celebs-26.jpeg" alt="Celeb 26" />
+          </div>
+          
+        
+          <!-- Sculptures -->
+
+          <div class="img-cont" data-name="sculpture-1" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-1.jpg" alt="Sculpture 1" />
+          </div>
+          <div class="img-cont" data-name="sculpture-2" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-2.jpg" alt="Sculpture 2" />
+          </div>
+          <div class="img-cont" data-name="sculpture-3" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-3.jpg" alt="Sculpture 3" />
+          </div>
+          <div class="img-cont" data-name="sculpture-4" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-4.jpg" alt="Sculpture 4" />
+          </div>
+          <div class="img-cont" data-name="sculpture-5" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-5.jpg" alt="Sculpture 5" />
+          </div>
+          <div class="img-cont" data-name="sculpture-6" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-6.jpg" alt="Sculpture 6" />
+          </div>
+          <div class="img-cont" data-name="sculpture-7" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-7.jpg" alt="Sculpture 7" />
+          </div>
+          <div class="img-cont" data-name="sculpture-8" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-8.jpg" alt="Sculpture 8" />
+          </div>
+          <div class="img-cont" data-name="sculpture-9" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-9.jpg" alt="Sculpture 9" />
+          </div>
+          <div class="img-cont" data-name="sculpture-10" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-10.jpg" alt="Sculpture 10" />
+          </div>
+          <div class="img-cont" data-name="sculpture-11" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-11.jpg" alt="Sculpture 11" />
+          </div>
+          <div class="img-cont" data-name="sculpture-12" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-12.jpg" alt="Sculpture 12" />
+          </div>
+          <div class="img-cont" data-name="sculpture-13" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-13.jpg" alt="Sculpture 13" />
+          </div>
+          <div class="img-cont" data-name="sculpture-14" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-14.jpg" alt="Sculpture 14" />
+          </div>
+          <div class="img-cont" data-name="sculpture-15" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-15.jpg" alt="Sculpture 15" />
+          </div>
+          <div class="img-cont" data-name="sculpture-16" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-16.jpg" alt="Sculpture 16" />
+          </div>
+          <div class="img-cont" data-name="sculpture-17" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-17.jpg" alt="Sculpture 17" />
+          </div>
+          <div class="img-cont" data-name="sculpture-18" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-18.jpg" alt="Sculpture 18" />
+          </div>
+          <div class="img-cont" data-name="sculpture-19" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-19.jpg" alt="Sculpture 19" />
+          </div>
+          <div class="img-cont" data-name="sculpture-20" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-20.jpg" alt="Sculpture 20" />
+          </div>
+          <div class="img-cont" data-name="sculpture-21" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-21.jpg" alt="Sculpture 21" />
+          </div>
+          <div class="img-cont" data-name="sculpture-22" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-22.jpg" alt="Sculpture 22" />
+          </div>
+          <div class="img-cont" data-name="sculpture-23" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-23.jpg" alt="Sculpture 23" />
+          </div>
+          <div class="img-cont" data-name="sculpture-24" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-24.jpg" alt="Sculpture 24" />
+          </div>
+          <div class="img-cont" data-name="sculpture-25" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-25.jpg" alt="Sculpture 25" />
+          </div>
+          <div class="img-cont" data-name="sculpture-26" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-26.jpg" alt="Sculpture 26" />
+          </div>
+          <div class="img-cont" data-name="sculpture-27" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-27.jpg" alt="Sculpture 27" />
+          </div>
+          <div class="img-cont" data-name="sculpture-28" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-28.jpg" alt="Sculpture 28" />
+          </div>
+          <div class="img-cont" data-name="sculpture-29" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-29.jpg" alt="Sculpture 29" />
+          </div>
+          <div class="img-cont" data-name="sculpture-30" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-30.jpg" alt="Sculpture 30" />
+          </div>
+          <div class="img-cont" data-name="sculpture-31" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-31.jpg" alt="Sculpture 31" />
+          </div>
+          <div class="img-cont" data-name="sculpture-32" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-32.jpg" alt="Sculpture 32" />
+          </div>
+          <div class="img-cont" data-name="sculpture-33" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-33.jpg" alt="Sculpture 33" />
+          </div>
+          <div class="img-cont" data-name="sculpture-34" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-34.jpg" alt="Sculpture 34" />
+          </div>
+          <div class="img-cont" data-name="sculpture-35" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-35.jpg" alt="Sculpture 35" />
+          </div>
+          <div class="img-cont" data-name="sculpture-36" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-36.jpg" alt="Sculpture 36" />
+          </div>
+          <div class="img-cont" data-name="sculpture-37" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-37.jpg" alt="Sculpture 37" />
+          </div>
+          <div class="img-cont" data-name="sculpture-38" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-38.jpg" alt="Sculpture 38" />
+          </div>
+          <div class="img-cont" data-name="sculpture-39" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-39.jpg" alt="Sculpture 39" />
+          </div>
+          <div class="img-cont" data-name="sculpture-40" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-40.jpg" alt="Sculpture 40" />
+          </div>
+          <div class="img-cont" data-name="sculpture-41" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-41.jpg" alt="Sculpture 41" />
+          </div>
+          <div class="img-cont" data-name="sculpture-42" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-42.jpg" alt="Sculpture 42" />
+          </div>
+          <div class="img-cont" data-name="sculpture-43" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-43.jpg" alt="Sculpture 43" />
+          </div>
+          <div class="img-cont" data-name="sculpture-44" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-44.jpg" alt="Sculpture 44" />
+          </div>
+          <div class="img-cont" data-name="sculpture-45" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-45.jpg" alt="Sculpture 45" />
+          </div>
+          <div class="img-cont" data-name="sculpture-46" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-46.jpg" alt="Sculpture 46" />
+          </div>
+          <div class="img-cont" data-name="sculpture-47" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-47.jpg" alt="Sculpture 47" />
+          </div>
+          <div class="img-cont" data-name="sculpture-48" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-48.jpg" alt="Sculpture 48" />
+          </div>
+          <div class="img-cont" data-name="sculpture-49" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-49.jpg" alt="Sculpture 49" />
+          </div>
+          <div class="img-cont" data-name="sculpture-50" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-50.jpg" alt="Sculpture 50" />
+          </div>
+          <div class="img-cont" data-name="sculpture-51" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-51.jpg" alt="Sculpture 51" />
+          </div>
+          <div class="img-cont" data-name="sculpture-52" data-category="sculpture">
+            <img src="./imgs/sculptures/sculpture-52.jpg" alt="Sculpture 52" />
+          </div>
+
+        
+          <!-- Interiors -->
+
+        <div class="img-cont" data-name="interior-1" data-category="interior">
+          <img src="./imgs/interiors/interior-1.jpg" alt="Interior 1" />
+        </div>
+        <div class="img-cont" data-name="interior-2" data-category="interior">
+          <img src="./imgs/interiors/interior-2.jpg" alt="Interior 2" />
+        </div>
+        <div class="img-cont" data-name="interior-3" data-category="interior">
+          <img src="./imgs/interiors/interior-3.jpg" alt="Interior 3" />
+        </div>
+        <div class="img-cont" data-name="interior-4" data-category="interior">
+          <img src="./imgs/interiors/interior-4.jpg" alt="Interior 4" />
+        </div>
+        <div class="img-cont" data-name="interior-5" data-category="interior">
+          <img src="./imgs/interiors/interior-5.jpg" alt="Interior 5" />
+        </div>
+        <div class="img-cont" data-name="interior-6" data-category="interior">
+          <img src="./imgs/interiors/interior-6.jpg" alt="Interior 6" />
+        </div>
+        <div class="img-cont" data-name="interior-7" data-category="interior">
+          <img src="./imgs/interiors/interior-7.jpg" alt="Interior 7" />
+        </div>
+        <div class="img-cont" data-name="interior-8" data-category="interior">
+          <img src="./imgs/interiors/interior-8.jpg" alt="Interior 8" />
+        </div>
+        <div class="img-cont" data-name="interior-9" data-category="interior">
+          <img src="./imgs/interiors/interior-9.jpg" alt="Interior 9" />
+        </div>
+        <div class="img-cont" data-name="interior-10" data-category="interior">
+          <img src="./imgs/interiors/interior-10.jpg" alt="Interior 10" />
+        </div>
+        <div class="img-cont" data-name="interior-11" data-category="interior">
+          <img src="./imgs/interiors/interior-11.jpg" alt="Interior 11" />
+        </div>
+        <div class="img-cont" data-name="interior-12" data-category="interior">
+          <img src="./imgs/interiors/interior-12.jpg" alt="Interior 12" />
+        </div>
+        <div class="img-cont" data-name="interior-13" data-category="interior">
+          <img src="./imgs/interiors/interior-13.jpg" alt="Interior 13" />
+        </div>
+        <div class="img-cont" data-name="interior-14" data-category="interior">
+          <img src="./imgs/interiors/interior-14.jpg" alt="Interior 14" />
+        </div>
+        <div class="img-cont" data-name="interior-15" data-category="interior">
+          <img src="./imgs/interiors/interior-15.jpg" alt="Interior 15" />
+        </div>
+        <div class="img-cont" data-name="interior-16" data-category="interior">
+          <img src="./imgs/interiors/interior-16.jpg" alt="Interior 16" />
+        </div>
+        <div class="img-cont" data-name="interior-17" data-category="interior">
+          <img src="./imgs/interiors/interior-17.jpg" alt="Interior 17" />
+        </div>
+        <div class="img-cont" data-name="interior-18" data-category="interior">
+          <img src="./imgs/interiors/interior-18.jpg" alt="Interior 18" />
+        </div>
+        <div class="img-cont" data-name="interior-19" data-category="interior">
+          <img src="./imgs/interiors/interior-19.jpg" alt="Interior 19" />
+        </div>
+        <div class="img-cont" data-name="interior-20" data-category="interior">
+          <img src="./imgs/interiors/interior-20.jpg" alt="Interior 20" />
+        </div>
+        <div class="img-cont" data-name="interior-21" data-category="interior">
+          <img src="./imgs/interiors/interior-21.jpg" alt="Interior 21" />
+        </div>
+        <div class="img-cont" data-name="interior-22" data-category="interior">
+          <img src="./imgs/interiors/interior-22.jpg" alt="Interior 22" />
+        </div>
+        <div class="img-cont" data-name="interior-23" data-category="interior">
+          <img src="./imgs/interiors/interior-23.jpg" alt="Interior 23" />
+        </div>
+        <div class="img-cont" data-name="interior-24" data-category="interior">
+          <img src="./imgs/interiors/interior-24.jpg" alt="Interior 24" />
+        </div>
+        <div class="img-cont" data-name="interior-25" data-category="interior">
+          <img src="./imgs/interiors/interior-25.jpg" alt="Interior 25" />
+        </div>
+        <div class="img-cont" data-name="interior-26" data-category="interior">
+          <img src="./imgs/interiors/interior-26.jpg" alt="Interior 26" />
+        </div>
+        <div class="img-cont" data-name="interior-27" data-category="interior">
+          <img src="./imgs/interiors/interior-27.jpg" alt="Interior 27" />
+        </div>
+
+          <!--Spiritual-->
+
+
+
+        <div class="img-cont" data-name="spiritual-1" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-1.jpg" alt="Spiritual 1" />
+        </div>
+        <div class="img-cont" data-name="spiritual-2" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-2.jpg" alt="Spiritual 2" />
+        </div>
+        <div class="img-cont" data-name="spiritual-3" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-3.jpg" alt="Spiritual 3" />
+        </div>
+        <div class="img-cont" data-name="spiritual-4" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-4.jpg" alt="Spiritual 4" />
+        </div>
+        <div class="img-cont" data-name="spiritual-5" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-5.jpg" alt="Spiritual 5" />
+        </div>
+        <div class="img-cont" data-name="spiritual-6" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-6.jpg" alt="Spiritual 6" />
+        </div>
+        <div class="img-cont" data-name="spiritual-7" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-7.jpg" alt="Spiritual 7" />
+        </div>
+        <div class="img-cont" data-name="spiritual-8" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-8.jpg" alt="Spiritual 8" />
+        </div>
+        <div class="img-cont" data-name="spiritual-9" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-9.jpg" alt="Spiritual 9" />
+        </div>
+        <div class="img-cont" data-name="spiritual-10" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-10.jpg" alt="Spiritual 10" />
+        </div>
+        <div class="img-cont" data-name="spiritual-11" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-11.jpg" alt="Spiritual 11" />
+        </div>
+        <div class="img-cont" data-name="spiritual-12" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-12.jpg" alt="Spiritual 12" />
+        </div>
+        <div class="img-cont" data-name="spiritual-13" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-13.jpg" alt="Spiritual 13" />
+        </div>
+        <div class="img-cont" data-name="spiritual-14" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-14.jpg" alt="Spiritual 14" />
+        </div>
+        <div class="img-cont" data-name="spiritual-15" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-15.jpg" alt="Spiritual 15" />
+        </div>
+        <div class="img-cont" data-name="spiritual-16" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-16.jpg" alt="Spiritual 16" />
+        </div>
+        <div class="img-cont" data-name="spiritual-17" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-17.jpg" alt="Spiritual 17" />
+        </div>
+        <div class="img-cont" data-name="spiritual-18" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-18.jpg" alt="Spiritual 18" />
+        </div>
+        <div class="img-cont" data-name="spiritual-19" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-19.jpg" alt="Spiritual 19" />
+        </div>
+        <div class="img-cont" data-name="spiritual-20" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-20.jpg" alt="Spiritual 20" />
+        </div>
+        <div class="img-cont" data-name="spiritual-21" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-21.jpg" alt="Spiritual 21" />
+        </div>
+        <div class="img-cont" data-name="spiritual-22" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-22.jpg" alt="Spiritual 22" />
+        </div>
+        <div class="img-cont" data-name="spiritual-23" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-23.jpg" alt="Spiritual 23" />
+        </div>
+        <div class="img-cont" data-name="spiritual-24" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-24.jpg" alt="Spiritual 24" />
+        </div>
+        <div class="img-cont" data-name="spiritual-25" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-25.jpg" alt="Spiritual 25" />
+        </div>
+        <div class="img-cont" data-name="spiritual-26" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-26.jpg" alt="Spiritual 26" />
+        </div>
+        <div class="img-cont" data-name="spiritual-27" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-27.jpg" alt="Spiritual 27" />
+        </div>
+        <div class="img-cont" data-name="spiritual-28" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-28.jpg" alt="Spiritual 28" />
+        </div>
+        <div class="img-cont" data-name="spiritual-29" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-29.jpg" alt="Spiritual 29" />
+        </div>
+        <div class="img-cont" data-name="spiritual-30" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-30.jpg" alt="Spiritual 30" />
+        </div>
+        <div class="img-cont" data-name="spiritual-31" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-31.jpg" alt="Spiritual 31" />
+        </div>
+        <div class="img-cont" data-name="spiritual-32" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-32.jpg" alt="Spiritual 32" />
+        </div>
+        <div class="img-cont" data-name="spiritual-33" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-33.jpg" alt="Spiritual 33" />
+        </div>
+        <div class="img-cont" data-name="spiritual-34" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-34.jpg" alt="Spiritual 34" />
+        </div>
+        <div class="img-cont" data-name="spiritual-35" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-35.jpg" alt="Spiritual 35" />
+        </div>
+        <div class="img-cont" data-name="spiritual-36" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-36.jpg" alt="Spiritual 36" />
+        </div>
+        <div class="img-cont" data-name="spiritual-37" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-37.jpg" alt="Spiritual 37" />
+        </div>
+        <div class="img-cont" data-name="spiritual-38" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-38.jpg" alt="Spiritual 38" />
+        </div>
+        <div class="img-cont" data-name="spiritual-39" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-39.jpg" alt="Spiritual 39" />
+        </div>
+        <div class="img-cont" data-name="spiritual-40" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-40.jpg" alt="Spiritual 40" />
+        </div>
+        <div class="img-cont" data-name="spiritual-41" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-41.jpg" alt="Spiritual 41" />
+        </div>
+        <div class="img-cont" data-name="spiritual-42" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-42.jpg" alt="Spiritual 42" />
+        </div>
+        <div class="img-cont" data-name="spiritual-43" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-43.jpg" alt="Spiritual 43" />
+        </div>
+        <div class="img-cont" data-name="spiritual-44" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-44.jpg" alt="Spiritual 44" />
+        </div>
+        <div class="img-cont" data-name="spiritual-45" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-45.jpg" alt="Spiritual 45" />
+        </div>
+        <div class="img-cont" data-name="spiritual-46" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-46.jpg" alt="Spiritual 46" />
+        </div>
+        <!-- <div class="img-cont" data-name="spiritual-47" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-47.jpg" alt="Spiritual 47" />
+        </div> -->
+        <div class="img-cont" data-name="spiritual-48" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-48.jpg" alt="Spiritual 48" />
+        </div>
+        <div class="img-cont" data-name="spiritual-49" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-49.jpg" alt="Spiritual 49" />
+        </div>
+        <div class="img-cont" data-name="spiritual-50" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-50.jpg" alt="Spiritual 50" />
+        </div>
+        <div class="img-cont" data-name="spiritual-51" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-51.jpg" alt="Spiritual 51" />
+        </div>
+        <div class="img-cont" data-name="spiritual-52" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-52.jpg" alt="Spiritual 52" />
+        </div>
+        <div class="img-cont" data-name="spiritual-53" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-53.jpg" alt="Spiritual 53" />
+        </div>
+        <div class="img-cont" data-name="spiritual-54" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-54.jpg" alt="Spiritual 54" />
+        </div>
+        <div class="img-cont" data-name="spiritual-55" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-55.jpg" alt="Spiritual 55" />
+        </div>
+        <div class="img-cont" data-name="spiritual-56" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-56.jpg" alt="Spiritual 56" />
+        </div>
+        <div class="img-cont" data-name="spiritual-57" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-57.jpg" alt="Spiritual 57" />
+        </div>
+        <div class="img-cont" data-name="spiritual-58" data-category="spiritual">
+          <img src="./imgs/spiritual/spiritual-58.jpg" alt="Spiritual 58" />
+        </div>
+        
+
+        </article>
+        
+        <!-- ------------POPUP-------------- -->
+      </section>
+      <article class="artist-section">
+        <div class="artist-head">
+          <h2 class="artist-title">Featured Artists</h2>
+          <p class="artist-des">Celebrating the visionaries behind the masterpieces. Explore the works of our highlighted artists, whose creativity and talent bring life to Studio Rangeen.</p>
+          <a href="./about.html" class="about-redirect">About us</a>
+        </div>
+        <div class="artist-content">
+          <div class="artist">
+            <img src="./imgs/Shubhankar kamble.jpg" alt="">
+            <h3 class="artist-content-title">Shubhaankar Kambale</h3>
+            <p class="artist-content-des">Founder of Rangeen Studio</p>
+          </div>
+          <div class="artist">
+            <img src="./imgs/Mona kamble.jpg" alt="">
+            <h3 class="artist-content-title">Mona <br> Kamble</h3>
+            <p class="artist-content-des">Founder of Rangeen Studio</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- --------FOOTER-SECTION-------- -->
+    <footer class="footer-section" id="footer">
+      <div class="footer-bg"></div>
+      <article class="footer-head">
+        <h1 class="footer-title">Studio Rangeen</h1>
+        <p class="footer-des">
+          Stay updated and engaged with our latest works and events! Follow us on our social media platforms for inspiration and behind-the-scenes insights into our creative journey.
+        </p>
+        <section class="footer-links">
+          <a href="mailto:kambleshubhankar@gmail.com" target="_blank" class="footerlogo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="email-icon">
+              <path fill="#4285F4" d="M12 12.713l-11.5-7.713v14h23v-14z"/>
+              <path fill="#34A853" d="M12 12.713l11.5-7.713h-23z"/>
+              <path fill="#FBBC05" d="M12 13.997l-11.5-7.997h23z"/>
+              <path fill="#EA4335" d="M0 4l12 9 12-9v-4h-24z"/>
+            </svg>
+            kambleshubhankar@gmail.com
+          </a>          
+            <a href="https://youtube.com/@shubhaankarkamble?si=z2D9ksH58fD8V811" alt="youtube" target="_blank" class="footerlogo"> <svg class="youtube" xmlns="http://www.w3.org/2000/svg" width="1.43em" height="1em" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg>Youtube</a>
+            <a href="https://www.instagram.com/artist.shubhaankar?igsh=dTI0cHU1YzJ1enlw" alt="instagram" target="_blank"  class="footerlogo">             <svg class="instagram" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60"/><rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60"/><path fill="#fff" d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334"/><defs><radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1" gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse"><stop stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></radialGradient><radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1" gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)" gradientUnits="userSpaceOnUse"><stop stop-color="#3771c8"/><stop offset=".128" stop-color="#3771c8"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></radialGradient></defs></g></svg>Instagram</a>
+            <a href="https://www.facebook.com/share/bbhionpfLMBd3UiV/?mibextid=LQQJ4d" alt="facebook" target="_blank"  class="footerlogo"> <svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="#1877f2" d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/><path fill="#fff" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"/></svg>Facebook</a>
+        </section>
+      </article>
+      <form class="footer-msgbox" onsubmit="sendMessage(event)">
+        <p class="msgbox-des">We'd love to hear from you! For inquiries, collaborations, or to learn more about our artistic services, please fill out the contact form below.</p>
+        <input id="form-name" type="text" placeholder="Full Name" required>
+        <input id="form-email" type="email" placeholder="Email id" required>
+        <textarea id="form-message" rows="5" placeholder="Enter your message here..." required></textarea>
+        <button type="submit" class="msgbox-submit">Send Message</button>
+      </form>
+    </footer>
+
+    <script>
+      ScrollReveal({
+        distance: "30px",
+        duration: 1500,
+        delay: 400,
+      });
+      ScrollReveal().reveal("nav", { delay: 1000, origin: "top" });
+      ScrollReveal().reveal(".hero-title, .gallery-title, .artist-title, .footer-title", {
+        delay: 0,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".hero-des, .gallery-des, .artist-des, .about-redirect, .footer-des, .footer-msgbox", {
+        delay: 0,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".footer-links a", {
+        delay: 0,
+        interval: 200,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".filter-btn, .artist", {
+        delay: 200,
+        origin: "left",
+        interval: 100,
+      });
+      ScrollReveal().reveal(".gallery", { delay: 300 });
+    </script>
+
+    <!------------ APP.JS -------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./common.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+
+    <script>
+      async function sendMessage(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+    
+        const name = document.getElementById('form-name').value;
+        const email = document.getElementById('form-email').value;
+        const message = document.getElementById('form-message').value;
+    
+        try {
+          const response = await fetch('http://localhost:5000/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              message: message
+            })
+          });
+    
+          const result = await response.text();
+          alert(result); // Show response message
+        } catch (error) {
+          alert('Error sending message');
+        }
+      }
+    </script>
+
+  </body>
+</html>

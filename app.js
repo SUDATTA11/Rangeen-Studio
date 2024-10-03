@@ -4,6 +4,8 @@ const filters = filterCont.querySelectorAll(".filter-btn");
 const frames = document.querySelectorAll(".img-cont");
 const gallery = document.querySelector(".gallery");
 
+fitlerCategories("painting");
+
 filters.forEach((filter) => {
   filter.addEventListener("click", (e) => {
     const filterdata = e.target.getAttribute("data-filter");
@@ -15,9 +17,14 @@ filters.forEach((filter) => {
 });
 
 function changeactive(newButton) {
-  // remove active from previous active button
-  filterCont.querySelector(".active").classList.remove("active");
-  // add active to newButton
+  // find the current active button
+  const currentActive = filterCont.querySelector(".active");
+
+  // if there is an active button, remove the active class
+  if (currentActive) {
+    currentActive.classList.remove("active");
+  }
+  // add active to the new button
   newButton.classList.add("active");
 }
 
@@ -54,7 +61,6 @@ function fitlerCategories(filterdata) {
 //         popupCont.style.display = "none";
 //       });
 
-
 //       let popupName = popup.getAttribute("data-popup");
 //       if (imgName == popupName) {
 //         popup.classList.add("active");
@@ -63,3 +69,24 @@ function fitlerCategories(filterdata) {
 //     });
 //   });
 // });
+
+
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true
+  },
+  spaceBetween: 60,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});

@@ -34,7 +34,7 @@
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
     height: 10px;
     background: var(--light-s-bg);
 }
@@ -199,7 +199,7 @@ header{
     position: relative;
 }
 .header-rangoli {
-    background: url(./imgs/top-raangoli.webp);
+    /* background: url(./imgs/top-raangoli.webp); */
     background-size: 800px;
     background-repeat: no-repeat;
     background-position: top center;
@@ -224,10 +224,16 @@ header{
 .hero-content {
   max-width: var(--max-width);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: var(--section-gap);
   margin-bottom: 200px;
+}
+.hero-title{
+  /* text-align: center; */
+  margin: auto;
+  margin-top: -30px;
 }
 .slider-cont {
   height: 400px;
@@ -454,7 +460,8 @@ header{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--basic-gap);
+  gap: 15px;
+
 }
 .footer-links a {
   padding: 10px 20px;
@@ -464,6 +471,11 @@ header{
   text-decoration: none;
   color: var(--light-s-text);
 }
+
+.footer-links a svg {
+  margin-right: 8px; /* Add space between icon and text */
+}
+
 .footer-msgbox {
   max-width: 500px;
   z-index: 2;
@@ -610,7 +622,12 @@ header{
     gap: var(--basic-gap);
     align-items: center;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
+  }
+  .hero-title{
+    /* text-align: center; */
+    margin: auto;
+    margin-top: 60px;
   }
   .hero-des {
     text-wrap: balance;
@@ -677,4 +694,10 @@ header{
   .team-des {
     text-align: center;
   }
+}
+
+
+.footerlogo{
+  display: flex;
+  align-items: center;
 }

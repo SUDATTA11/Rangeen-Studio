@@ -34,7 +34,7 @@
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
   height: 5px;
   background: var(--light-s-bg);
 }
@@ -104,7 +104,7 @@ header {
   position: relative;
 }
 .header-rangoli {
-  background: url(./imgs/top-raangoli.webp);
+  /* background: url(./imgs/top-raangoli.webp); */
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -213,16 +213,25 @@ nav {
   background: var(--light-s-bg);
   height: 100svh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: var(--section-d-pad);
+
 }
 .hero-content {
+  margin-top: 20px;
   max-width: var(--max-width);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: var(--section-gap);
+  gap: 10px
+}
+.hero-title{
+  /* text-align: center; */
+  margin: auto;
+  margin-top: 60px;
 }
 
 /* -----GALLERY------ */
@@ -299,7 +308,7 @@ nav {
 }
 
 .img-cont:hover {
-  padding-bottom: calc(13rem - clamp(6rem, 3rem + 6.25vw, 7rem));
+  padding-bottom: calc(9rem - clamp(6rem, 3rem + 6.25vw, 7rem));
 }
 .img-cont:hover img {
   transform: scale(0.95) rotate(-2deg);
@@ -443,17 +452,22 @@ nav {
 .footer-links {
   display: flex;
   flex-direction: column;
+  gap: 15px;
   align-items: flex-start;
-  gap: var(--basic-gap);
 }
 .footer-links a {
   padding: 10px 20px;
+  align-items: center;
   background: var(--frost-bg);
   backdrop-filter: blur(10px);
   border-radius: 50px;
   text-decoration: none;
-  color: var(--light-s-text);
+  color: var(--light-s-text);  
 }
+.footer-links a svg {
+  margin-right: 8px; /* Add space between icon and text */
+}
+
 .footer-msgbox {
   max-width: 500px;
   z-index: 2;
@@ -592,7 +606,7 @@ nav {
     text-wrap: wrap;
   }
   .hero-content {
-    flex-direction: column;
+    display: flex;
     gap: var(--basic-gap);
     align-items: center;
     text-align: center;
@@ -674,13 +688,166 @@ nav {
   }
   .footer-links {
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
   }
+}
+
+.footerlogo{
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 350px) {
   .gallery {
     columns: 1;
   }
+}
+.swiper {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  width: 300px; /* Default width for larger screens */
+  height: 400px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: f;
+  margin-right: 20px; /* Space between slides */
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+}
+
+/* Pagination styles */
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 250px; /* Adjust width for tablet size */
+    height: 350px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 200px; /* Adjust width for phone size */
+    height: 300px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper-slide {
+    width: 150px; /* Smaller width for small phone screens */
+    height: 250px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 1440px) {
+  .swiper {
+    max-width: 1200px; /* Set a max-width for larger screens up to 1440px */
+  }
+}
+@media (max-width: 1920px) {
+  .swiper {
+    max-width: 1300px; /* Set a max-width for larger screens up to 1440px */
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    max-width: 800px; /* Set a max-width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 600px; /* Set a max-width for smaller tablets/large phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    max-width: 380px; /* Set a max-width for mobile screens */
+  }
+} 
+
+
+/* Replace with local images */
+.swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/celebs/celebs-1.jpg') no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/paintings/painting-1.jpg') no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/sculptures/sculpture-1.jpg') no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/paintings/painting-13.jpg') no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/paintings/painting-14.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--six {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/interiors/interior-10.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--seven {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/sculptures/sculpture-30.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--eight {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/paintings/painting-30.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--nine {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/paintings/painting-18.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--ten {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/sculptures/sculpture-17.jpg') no-repeat 50% 50% / cover;
+}
+.swiper-slide--eleven {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url('./imgs/interiors/interior-8.jpg') no-repeat 50% 50% / cover;
+}
+
+
+/* Disable shadows */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
 }
