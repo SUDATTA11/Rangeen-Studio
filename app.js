@@ -4,7 +4,7 @@ const filters = filterCont.querySelectorAll(".filter-btn");
 const frames = document.querySelectorAll(".img-cont");
 const gallery = document.querySelector(".gallery");
 
-fitlerCategories("painting");
+fitlerCategories("general");
 
 filters.forEach((filter) => {
   filter.addEventListener("click", (e) => {
