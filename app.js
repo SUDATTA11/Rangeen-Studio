@@ -4,7 +4,7 @@ const filters = filterCont.querySelectorAll(".filter-btn");
 const frames = document.querySelectorAll(".img-cont");
 const gallery = document.querySelector(".gallery");
 
-fitlerCategories("painting");
+fitlerCategories("general");
 
 filters.forEach((filter) => {
   filter.addEventListener("click", (e) => {
@@ -79,7 +79,7 @@ var swiper = new Swiper(".swiper", {
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 100,
+    depth: 0,
     modifier: 2,
     slideShadows: true
   },

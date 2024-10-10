@@ -424,6 +424,12 @@ nav {
   padding: var(--section-d-pad);
   position: relative;
 }
+.footer-copyright{
+  font-family: "Satoshi", sans-serif;
+  background: var(--light-p-bg);display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .footer-bg {
   background: url(./imgs/footer-bg.webp);
   background-size: 700px;
@@ -723,7 +729,6 @@ nav {
   width: 300px; /* Default width for larger screens */
   height: 400px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  filter: blur(1px);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -799,7 +804,9 @@ nav {
 /* Replace with local images */
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url('./imgs/celebs/celebs-1.jpg') no-repeat 50% 50% / cover;
+    url('./imgs/celebs/celebs-1.jpg') no-repeat center center;
+  background-size: cover; /* This scales the image to cover the container */
+  image-rendering: auto;  /* Helps ensure smooth rendering */
 }
 
 .swiper-slide--two {
