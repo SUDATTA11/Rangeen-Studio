@@ -79,7 +79,7 @@ var swiper = new Swiper(".swiper", {
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 100,
+    depth: 0,
     modifier: 2,
     slideShadows: true
   },
