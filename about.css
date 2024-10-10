@@ -229,6 +229,7 @@ header{
   align-items: flex-start;
   gap: var(--section-gap);
   margin-bottom: 200px;
+  text-align: center;
 }
 .hero-title{
   /* text-align: center; */

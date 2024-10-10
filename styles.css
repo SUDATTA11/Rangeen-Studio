@@ -226,6 +226,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: center;
   gap: 10px
 }
 .hero-title{
