@@ -430,6 +430,13 @@ header{
   padding: var(--section-d-pad);
   position: relative;
 }
+
+.footer-copyright{
+  font-family: "Satoshi", sans-serif;
+  background: var(--light-p-bg);display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .footer-bg {
   background: url(./imgs/footer-bg.webp);
   background-size: 700px;
