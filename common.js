@@ -44,13 +44,9 @@ const formEmail = document.getElementById("form-email");
 const formMessage = document.getElementById("form-message");
 
 async function hello(event) {
-  // event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
   var x = document.getElementById("snackbar");
-
-  // Add the "show" class to DIV
   x.className = "show";
-
-  // After 3 seconds, remove the show class from DIV
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 
   const reqBody = {

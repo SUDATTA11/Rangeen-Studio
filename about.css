@@ -523,6 +523,16 @@ header{
 }
 
 
+.footer-copyright{
+  padding: 10px 25px;
+}
+
+.footer-copyright p{
+  font-size: 12px;
+  text-align: center;
+  text-wrap: balance;
+}
+
 
 
 @media (prefers-color-scheme: dark) {
