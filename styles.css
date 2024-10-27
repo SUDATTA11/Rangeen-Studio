@@ -292,13 +292,13 @@ nav {
   column-gap: 15px;
 }
 .img-cont {
-  position: relative;
+  /* position: relative; */
   background: var(--light-s-bg);
   width: 100%;
-  height: auto;
-  display: flex;
+  /* height: auto; */
+  /* display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; */
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 4px 4px 10px var(--frame-shadow);
@@ -308,9 +308,9 @@ nav {
   cursor: pointer;
 }
 
-.img-cont:hover {
+/* .img-cont:hover {
   padding-bottom: calc(9rem - clamp(6rem, 3rem + 6.25vw, 7rem));
-}
+} */
 .img-cont:hover img {
   transform: scale(0.95) rotate(-2deg);
 }
@@ -321,7 +321,7 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.img-content {
+/* .img-content {
   position: absolute;
   left: 20px;
   bottom: 10px;
@@ -335,9 +335,9 @@ nav {
   z-index: 0;
   transition: all 0.5s 0.3s;
   text-wrap: balance;
-}
+} */
 
-.img-cont:hover .img-content {
+/* .img-cont:hover .img-content {
   opacity: 1;
   max-height: fit-content;
 }
@@ -350,10 +350,9 @@ nav {
   background: var(--light-p-bg);
   padding: 5px 10px;
   border-radius: 50px;
-  /* text-wrap: nowrap; */
-}
+  text-wrap: nowrap;
+} */
 
-/* * ---------POP-UP----------- */
 
 /* -------------FEATURED-ARTIST---------------- */
 .artist-section {
@@ -647,37 +646,15 @@ nav {
     padding: 5px;
     margin-bottom: 10px;
   }
-  .gallery .img-cont:hover {
+  /* .gallery .img-cont:hover {
     padding-bottom: calc(12.5rem - clamp(5rem, 4.244rem + 5.7416vw, 7rem));
-  }
+  } */
 
-  .img-content {
-    /* display: none; */
+  /* .img-content {
+    display: none;
     gap: 5px;
     left: 10px;
     bottom: 10px;
-  }
-
-  /* .gallery-popups{
-    align-items: flex-end;
-  }
-  .gallery-popups .popup{
-    width: 90%;
-    border-radius: 10px 10px 0 0;
-  }
-  .popup-content{
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
-    padding: 20px 20px 0 20px;
-  }
-  .popup img{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .popup .popup-data{
-    height: auto;
-    overflow: visible;
   } */
 
   .artist-section {
